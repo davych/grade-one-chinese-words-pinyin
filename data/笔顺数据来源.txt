@@ -1,0 +1,20 @@
+笔顺及字形矢量数据来源
+
+本目录的 strokes.json 为 hanzi-writer-data 官方仓库中以下汉字的原始数据汇编，保留 strokes 与 medians；未修改单字矢量、笔顺或中线数据。它覆盖附件识字与写字两类的全部汉字，用于所有范字离线显示，以及写字练习的笔顺演示。
+
+官方仓库：https://github.com/chanind/hanzi-writer-data
+固定提交：68d10a4b21150cae5e1ebbd223eed289cf32d90c
+仓库 package.json 版本：2.0.1
+数据路径：https://github.com/chanind/hanzi-writer-data/tree/68d10a4b21150cae5e1ebbd223eed289cf32d90c/data
+获取日期：2026-10-31（Asia/Shanghai）
+
+上游：Make Me a Hanzi，https://github.com/skishore/makemeahanzi
+字体来源：Arphic Technology Co., Ltd.（文鼎科技）
+许可证：Arphic Public License。原始许可证全文见同目录 ARPHICPL.TXT，须随数据分发保留。它与 Hanzi Writer 程序库的 MIT 许可证不同。
+
+SVG 字形坐标为字体坐标，示例渲染使用 viewBox="0 0 1024 1024" 与 transform="scale(1,-1) translate(0,-900)"；strokes 数组顺序就是笔画顺序，medians 为相应笔画的中线。
+
+覆盖汉字（153 个，为 data/words.json 的 readingGroups 与 writingGroups 并集）：
+天地人你我他云雨风日月水火山石田禾对雾霜朝霞冰雪雷电虫鸟羊马鱼草花树叶竹牙角鹅鸡鸭兔虾蟹苗口耳目手足身心上下左右东西南北一二三四五六七八九十百千站坐行卧看听说唱跳跑走飞游打拍拔捉喊挂摆穿脱迎追躺爸妈哥弟姐妹爷奶她它谁那哪您俩群个只条片支把土不画棋字词语句子桌纸文数学音乐儿白皮小桥台明同自己衣服快来里果远到
+
+校验：全部汉字存在；每字 strokes 与 medians 数量相等且非空；每条 SVG path 以 M 开始；每条 median 至少含 2 个点。首次取得的75个写字字数据保持不变；补充78个识字用字。无需运行时联网。

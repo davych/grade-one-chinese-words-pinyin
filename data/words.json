@@ -1,0 +1,1005 @@
+{
+  "schemaVersion": 1,
+  "source": "words.txt",
+  "readingGroups": [
+    {
+      "id": "nature",
+      "title": "自然与天文",
+      "items": [
+        {
+          "char": "天",
+          "pinyin": "tiān"
+        },
+        {
+          "char": "地",
+          "pinyin": "dì",
+          "note": "按“天地、大地”读 dì；作助词时可读 de。"
+        },
+        {
+          "char": "人",
+          "pinyin": "rén"
+        },
+        {
+          "char": "你",
+          "pinyin": "nǐ"
+        },
+        {
+          "char": "我",
+          "pinyin": "wǒ"
+        },
+        {
+          "char": "他",
+          "pinyin": "tā"
+        },
+        {
+          "char": "云",
+          "pinyin": "yún"
+        },
+        {
+          "char": "雨",
+          "pinyin": "yǔ"
+        },
+        {
+          "char": "风",
+          "pinyin": "fēng"
+        },
+        {
+          "char": "日",
+          "pinyin": "rì"
+        },
+        {
+          "char": "月",
+          "pinyin": "yuè"
+        },
+        {
+          "char": "水",
+          "pinyin": "shuǐ"
+        },
+        {
+          "char": "火",
+          "pinyin": "huǒ"
+        },
+        {
+          "char": "山",
+          "pinyin": "shān"
+        },
+        {
+          "char": "石",
+          "pinyin": "shí"
+        },
+        {
+          "char": "田",
+          "pinyin": "tián"
+        },
+        {
+          "char": "禾",
+          "pinyin": "hé"
+        },
+        {
+          "char": "对",
+          "pinyin": "duì"
+        },
+        {
+          "char": "雾",
+          "pinyin": "wù"
+        },
+        {
+          "char": "霜",
+          "pinyin": "shuāng"
+        },
+        {
+          "char": "朝",
+          "pinyin": "zhāo",
+          "note": "按自然主题中的“朝霞”读 zhāo；“朝向、朝代”读 cháo。"
+        },
+        {
+          "char": "霞",
+          "pinyin": "xiá"
+        },
+        {
+          "char": "冰",
+          "pinyin": "bīng"
+        },
+        {
+          "char": "雪",
+          "pinyin": "xuě"
+        },
+        {
+          "char": "雷",
+          "pinyin": "léi"
+        },
+        {
+          "char": "电",
+          "pinyin": "diàn"
+        }
+      ],
+      "sourceCount": 27
+    },
+    {
+      "id": "animals-plants",
+      "title": "动物与植物",
+      "items": [
+        {
+          "char": "虫",
+          "pinyin": "chóng"
+        },
+        {
+          "char": "鸟",
+          "pinyin": "niǎo"
+        },
+        {
+          "char": "羊",
+          "pinyin": "yáng"
+        },
+        {
+          "char": "马",
+          "pinyin": "mǎ"
+        },
+        {
+          "char": "鱼",
+          "pinyin": "yú"
+        },
+        {
+          "char": "草",
+          "pinyin": "cǎo"
+        },
+        {
+          "char": "花",
+          "pinyin": "huā"
+        },
+        {
+          "char": "树",
+          "pinyin": "shù"
+        },
+        {
+          "char": "叶",
+          "pinyin": "yè"
+        },
+        {
+          "char": "竹",
+          "pinyin": "zhú"
+        },
+        {
+          "char": "牙",
+          "pinyin": "yá"
+        },
+        {
+          "char": "角",
+          "pinyin": "jiǎo",
+          "note": "按“牛角、羊角”读 jiǎo；“角色”读 jué。"
+        },
+        {
+          "char": "鹅",
+          "pinyin": "é"
+        },
+        {
+          "char": "鸡",
+          "pinyin": "jī"
+        },
+        {
+          "char": "鸭",
+          "pinyin": "yā"
+        },
+        {
+          "char": "兔",
+          "pinyin": "tù"
+        },
+        {
+          "char": "虾",
+          "pinyin": "xiā"
+        },
+        {
+          "char": "蟹",
+          "pinyin": "xiè"
+        },
+        {
+          "char": "苗",
+          "pinyin": "miáo"
+        }
+      ],
+      "sourceCount": 19
+    },
+    {
+      "id": "body-directions-numbers",
+      "title": "人体、方位与数字",
+      "items": [
+        {
+          "char": "口",
+          "pinyin": "kǒu"
+        },
+        {
+          "char": "耳",
+          "pinyin": "ěr"
+        },
+        {
+          "char": "目",
+          "pinyin": "mù"
+        },
+        {
+          "char": "手",
+          "pinyin": "shǒu"
+        },
+        {
+          "char": "足",
+          "pinyin": "zú"
+        },
+        {
+          "char": "身",
+          "pinyin": "shēn"
+        },
+        {
+          "char": "心",
+          "pinyin": "xīn"
+        },
+        {
+          "char": "上",
+          "pinyin": "shàng"
+        },
+        {
+          "char": "下",
+          "pinyin": "xià"
+        },
+        {
+          "char": "左",
+          "pinyin": "zuǒ"
+        },
+        {
+          "char": "右",
+          "pinyin": "yòu"
+        },
+        {
+          "char": "东",
+          "pinyin": "dōng"
+        },
+        {
+          "char": "西",
+          "pinyin": "xī"
+        },
+        {
+          "char": "南",
+          "pinyin": "nán"
+        },
+        {
+          "char": "北",
+          "pinyin": "běi"
+        },
+        {
+          "char": "一",
+          "pinyin": "yī",
+          "note": "单字读 yī；连读时根据后接字声调发生变调。"
+        },
+        {
+          "char": "二",
+          "pinyin": "èr"
+        },
+        {
+          "char": "三",
+          "pinyin": "sān"
+        },
+        {
+          "char": "四",
+          "pinyin": "sì"
+        },
+        {
+          "char": "五",
+          "pinyin": "wǔ"
+        },
+        {
+          "char": "六",
+          "pinyin": "liù"
+        },
+        {
+          "char": "七",
+          "pinyin": "qī"
+        },
+        {
+          "char": "八",
+          "pinyin": "bā"
+        },
+        {
+          "char": "九",
+          "pinyin": "jiǔ"
+        },
+        {
+          "char": "十",
+          "pinyin": "shí"
+        },
+        {
+          "char": "百",
+          "pinyin": "bǎi"
+        },
+        {
+          "char": "千",
+          "pinyin": "qiān"
+        }
+      ],
+      "sourceCount": 27
+    },
+    {
+      "id": "actions",
+      "title": "动词与行为",
+      "items": [
+        {
+          "char": "站",
+          "pinyin": "zhàn"
+        },
+        {
+          "char": "坐",
+          "pinyin": "zuò"
+        },
+        {
+          "char": "行",
+          "pinyin": "xíng",
+          "note": "按动作“行走”读 xíng；“银行、一行字”读 háng。"
+        },
+        {
+          "char": "卧",
+          "pinyin": "wò"
+        },
+        {
+          "char": "看",
+          "pinyin": "kàn",
+          "note": "按“看见、看书”读 kàn；“看守”读 kān。"
+        },
+        {
+          "char": "听",
+          "pinyin": "tīng"
+        },
+        {
+          "char": "说",
+          "pinyin": "shuō"
+        },
+        {
+          "char": "唱",
+          "pinyin": "chàng"
+        },
+        {
+          "char": "跳",
+          "pinyin": "tiào"
+        },
+        {
+          "char": "跑",
+          "pinyin": "pǎo"
+        },
+        {
+          "char": "走",
+          "pinyin": "zǒu"
+        },
+        {
+          "char": "飞",
+          "pinyin": "fēi"
+        },
+        {
+          "char": "游",
+          "pinyin": "yóu"
+        },
+        {
+          "char": "打",
+          "pinyin": "dǎ"
+        },
+        {
+          "char": "拍",
+          "pinyin": "pāi"
+        },
+        {
+          "char": "拔",
+          "pinyin": "bá"
+        },
+        {
+          "char": "捉",
+          "pinyin": "zhuō"
+        },
+        {
+          "char": "喊",
+          "pinyin": "hǎn"
+        },
+        {
+          "char": "挂",
+          "pinyin": "guà"
+        },
+        {
+          "char": "摆",
+          "pinyin": "bǎi"
+        },
+        {
+          "char": "穿",
+          "pinyin": "chuān"
+        },
+        {
+          "char": "脱",
+          "pinyin": "tuō"
+        },
+        {
+          "char": "迎",
+          "pinyin": "yíng"
+        },
+        {
+          "char": "追",
+          "pinyin": "zhuī"
+        },
+        {
+          "char": "躺",
+          "pinyin": "tǎng"
+        }
+      ],
+      "sourceCount": 25
+    },
+    {
+      "id": "people-common",
+      "title": "人称、代词及其他高频字",
+      "items": [
+        {
+          "char": "爸",
+          "pinyin": "bà"
+        },
+        {
+          "char": "妈",
+          "pinyin": "mā"
+        },
+        {
+          "char": "哥",
+          "pinyin": "gē"
+        },
+        {
+          "char": "弟",
+          "pinyin": "dì"
+        },
+        {
+          "char": "姐",
+          "pinyin": "jiě"
+        },
+        {
+          "char": "妹",
+          "pinyin": "mèi"
+        },
+        {
+          "char": "爷",
+          "pinyin": "yé"
+        },
+        {
+          "char": "奶",
+          "pinyin": "nǎi"
+        },
+        {
+          "char": "她",
+          "pinyin": "tā"
+        },
+        {
+          "char": "它",
+          "pinyin": "tā"
+        },
+        {
+          "char": "谁",
+          "pinyin": "shéi",
+          "note": "采用常见口语读音 shéi，也读 shuí。"
+        },
+        {
+          "char": "那",
+          "pinyin": "nà",
+          "note": "按指示代词“那个”读 nà。"
+        },
+        {
+          "char": "哪",
+          "pinyin": "nǎ",
+          "note": "按疑问代词“哪里”读 nǎ。"
+        },
+        {
+          "char": "您",
+          "pinyin": "nín"
+        },
+        {
+          "char": "俩",
+          "pinyin": "liǎ",
+          "note": "按“两个、我们俩”读 liǎ；“伎俩”读 liǎng。"
+        },
+        {
+          "char": "群",
+          "pinyin": "qún"
+        },
+        {
+          "char": "个",
+          "pinyin": "gè",
+          "note": "按量词读 gè；“自个儿”中的“个”可读 gě。"
+        },
+        {
+          "char": "只",
+          "pinyin": "zhī",
+          "note": "按量词“一只”读 zhī；“只有”读 zhǐ。"
+        },
+        {
+          "char": "条",
+          "pinyin": "tiáo"
+        },
+        {
+          "char": "片",
+          "pinyin": "piàn",
+          "note": "采用“一片”的读音 piàn；“相片儿”等口语用法也可读 piān。"
+        },
+        {
+          "char": "支",
+          "pinyin": "zhī"
+        },
+        {
+          "char": "把",
+          "pinyin": "bǎ",
+          "note": "采用“把手、把住”的读音 bǎ；“刀把儿”读 bà。"
+        }
+      ],
+      "sourceCount": 23
+    }
+  ],
+  "writingGroups": [
+    {
+      "id": "units-1-2",
+      "title": "第1—2单元 · 象形字与基础身体、自然字",
+      "items": [
+        {
+          "char": "口",
+          "pinyin": "kǒu",
+          "words": [
+            "人口",
+            "开口"
+          ]
+        },
+        {
+          "char": "耳",
+          "pinyin": "ěr",
+          "words": [
+            "耳目",
+            "耳朵"
+          ]
+        },
+        {
+          "char": "目",
+          "pinyin": "mù",
+          "words": [
+            "目光",
+            "头目"
+          ]
+        },
+        {
+          "char": "手",
+          "pinyin": "shǒu",
+          "words": [
+            "小手",
+            "手足"
+          ]
+        },
+        {
+          "char": "日",
+          "pinyin": "rì",
+          "words": [
+            "日子",
+            "日月"
+          ]
+        },
+        {
+          "char": "月",
+          "pinyin": "yuè",
+          "words": [
+            "月儿",
+            "明月"
+          ]
+        },
+        {
+          "char": "水",
+          "pinyin": "shuǐ",
+          "words": [
+            "河水",
+            "开水"
+          ]
+        },
+        {
+          "char": "火",
+          "pinyin": "huǒ",
+          "words": [
+            "大火",
+            "火山"
+          ]
+        },
+        {
+          "char": "山",
+          "pinyin": "shān",
+          "words": [
+            "大山",
+            "山羊"
+          ]
+        },
+        {
+          "char": "石",
+          "pinyin": "shí",
+          "words": [
+            "石头",
+            "石子"
+          ]
+        },
+        {
+          "char": "田",
+          "pinyin": "tián",
+          "words": [
+            "田地",
+            "水田"
+          ]
+        },
+        {
+          "char": "禾",
+          "pinyin": "hé",
+          "words": [
+            "禾苗"
+          ]
+        },
+        {
+          "char": "爸",
+          "pinyin": "bà"
+        },
+        {
+          "char": "妈",
+          "pinyin": "mā"
+        },
+        {
+          "char": "马",
+          "pinyin": "mǎ"
+        },
+        {
+          "char": "土",
+          "pinyin": "tǔ"
+        },
+        {
+          "char": "不",
+          "pinyin": "bù",
+          "note": "单字读 bù；在去声（第四声）前通常变读 bú。"
+        },
+        {
+          "char": "画",
+          "pinyin": "huà"
+        },
+        {
+          "char": "打",
+          "pinyin": "dǎ"
+        },
+        {
+          "char": "棋",
+          "pinyin": "qí"
+        }
+      ],
+      "sourceCount": 20
+    },
+    {
+      "id": "units-3-4",
+      "title": "第3—4单元 · 数字、方向、人称与学校生活",
+      "items": [
+        {
+          "char": "一",
+          "pinyin": "yī",
+          "note": "单字读 yī；连读时根据后接字声调发生变调。"
+        },
+        {
+          "char": "二",
+          "pinyin": "èr"
+        },
+        {
+          "char": "三",
+          "pinyin": "sān"
+        },
+        {
+          "char": "四",
+          "pinyin": "sì"
+        },
+        {
+          "char": "五",
+          "pinyin": "wǔ"
+        },
+        {
+          "char": "六",
+          "pinyin": "liù"
+        },
+        {
+          "char": "七",
+          "pinyin": "qī"
+        },
+        {
+          "char": "八",
+          "pinyin": "bā"
+        },
+        {
+          "char": "九",
+          "pinyin": "jiǔ"
+        },
+        {
+          "char": "十",
+          "pinyin": "shí"
+        },
+        {
+          "char": "上",
+          "pinyin": "shàng"
+        },
+        {
+          "char": "下",
+          "pinyin": "xià"
+        },
+        {
+          "char": "你",
+          "pinyin": "nǐ"
+        },
+        {
+          "char": "我",
+          "pinyin": "wǒ"
+        },
+        {
+          "char": "他",
+          "pinyin": "tā"
+        },
+        {
+          "char": "地",
+          "pinyin": "dì",
+          "note": "按“天地、大地”读 dì；作助词时可读 de。"
+        },
+        {
+          "char": "人",
+          "pinyin": "rén"
+        },
+        {
+          "char": "字",
+          "pinyin": "zì"
+        },
+        {
+          "char": "词",
+          "pinyin": "cí"
+        },
+        {
+          "char": "语",
+          "pinyin": "yǔ"
+        },
+        {
+          "char": "句",
+          "pinyin": "jù"
+        },
+        {
+          "char": "子",
+          "pinyin": "zǐ",
+          "note": "单字采用本调 zǐ；“日子、石子”等词中常读轻声 zi。"
+        },
+        {
+          "char": "桌",
+          "pinyin": "zhuō"
+        },
+        {
+          "char": "纸",
+          "pinyin": "zhǐ"
+        },
+        {
+          "char": "文",
+          "pinyin": "wén"
+        },
+        {
+          "char": "数",
+          "pinyin": "shù",
+          "note": "按学校语境“数学、数字”读 shù；“数一数”读 shǔ。"
+        },
+        {
+          "char": "学",
+          "pinyin": "xué"
+        },
+        {
+          "char": "音",
+          "pinyin": "yīn"
+        },
+        {
+          "char": "乐",
+          "pinyin": "lè",
+          "note": "采用“快乐”的读音 lè；“音乐”读 yuè。"
+        }
+      ],
+      "sourceCount": 29
+    },
+    {
+      "id": "units-5-8",
+      "title": "第5—8单元 · 结构与日常生活高频字",
+      "items": [
+        {
+          "char": "雪",
+          "pinyin": "xuě"
+        },
+        {
+          "char": "草",
+          "pinyin": "cǎo"
+        },
+        {
+          "char": "儿",
+          "pinyin": "ér"
+        },
+        {
+          "char": "妹",
+          "pinyin": "mèi"
+        },
+        {
+          "char": "奶",
+          "pinyin": "nǎi"
+        },
+        {
+          "char": "白",
+          "pinyin": "bái"
+        },
+        {
+          "char": "皮",
+          "pinyin": "pí"
+        },
+        {
+          "char": "小",
+          "pinyin": "xiǎo"
+        },
+        {
+          "char": "桥",
+          "pinyin": "qiáo"
+        },
+        {
+          "char": "台",
+          "pinyin": "tái"
+        },
+        {
+          "char": "哥",
+          "pinyin": "gē"
+        },
+        {
+          "char": "弟",
+          "pinyin": "dì"
+        },
+        {
+          "char": "明",
+          "pinyin": "míng",
+          "words": [
+            "明天",
+            "明亮"
+          ]
+        },
+        {
+          "char": "同",
+          "pinyin": "tóng",
+          "words": [
+            "同学",
+            "一同"
+          ]
+        },
+        {
+          "char": "自",
+          "pinyin": "zì",
+          "words": [
+            "自己"
+          ]
+        },
+        {
+          "char": "己",
+          "pinyin": "jǐ",
+          "words": [
+            "自己"
+          ]
+        },
+        {
+          "char": "衣",
+          "pinyin": "yī",
+          "words": [
+            "衣服"
+          ]
+        },
+        {
+          "char": "服",
+          "pinyin": "fú",
+          "note": "单字采用本调 fú；“衣服”一词中通常读轻声 fu。",
+          "words": [
+            "衣服"
+          ]
+        },
+        {
+          "char": "快",
+          "pinyin": "kuài",
+          "words": [
+            "快乐"
+          ]
+        },
+        {
+          "char": "来",
+          "pinyin": "lái",
+          "words": [
+            "来往"
+          ]
+        },
+        {
+          "char": "里",
+          "pinyin": "lǐ",
+          "words": [
+            "里面"
+          ]
+        },
+        {
+          "char": "果",
+          "pinyin": "guǒ",
+          "words": [
+            "果子"
+          ]
+        },
+        {
+          "char": "远",
+          "pinyin": "yuǎn",
+          "words": [
+            "远方"
+          ]
+        },
+        {
+          "char": "走",
+          "pinyin": "zǒu",
+          "words": [
+            "走路"
+          ]
+        },
+        {
+          "char": "到",
+          "pinyin": "dào",
+          "words": [
+            "到处"
+          ]
+        },
+        {
+          "char": "片",
+          "pinyin": "piàn",
+          "note": "采用“一片”的读音 piàn；“相片儿”等口语用法也可读 piān。",
+          "words": [
+            "一片"
+          ]
+        }
+      ],
+      "sourceCount": 28
+    }
+  ],
+  "metadata": {
+    "reading": {
+      "sourceCount": 121,
+      "uniqueCount": 119,
+      "duplicateOccurrences": [
+        {
+          "char": "云",
+          "groupId": "nature"
+        },
+        {
+          "char": "他",
+          "groupId": "people-common"
+        }
+      ],
+      "duplicateCharacters": {
+        "他": 2,
+        "云": 2
+      },
+      "groupCounts": {
+        "nature": 26,
+        "animals-plants": 19,
+        "body-directions-numbers": 27,
+        "actions": 25,
+        "people-common": 22
+      }
+    },
+    "writing": {
+      "sourceCount": 77,
+      "uniqueCount": 75,
+      "duplicateOccurrences": [
+        {
+          "char": "妈",
+          "groupId": "units-5-8"
+        },
+        {
+          "char": "奶",
+          "groupId": "units-5-8"
+        }
+      ],
+      "duplicateCharacters": {
+        "妈": 2,
+        "奶": 2
+      },
+      "groupCounts": {
+        "units-1-2": 20,
+        "units-3-4": 29,
+        "units-5-8": 26
+      }
+    },
+    "policy": "按原文件实际列出的汉字制作；各类型内部去重并保留首次出现位置，读、写两类之间独立保留；未补齐标题中的300/100。",
+    "pronunciationPolicy": "标注单字常用本调；多音字按主题或词语语境选音，必要说明见note。拼音仅用于显示提示，打印练习默认留空。"
+  }
+}

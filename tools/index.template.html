@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="离线语文练习册：拼音田字格、逐字书写、笔顺演示，适合 A4 打印。">
+<title>语文练习册 · 一格一字，一笔一画</title>
+<style>
+:root{--desk:#f3f1eb;--paper:#fff;--ink:#29352e;--pencil:#647067;--quiet:#879087;--book:#365c47;--book-soft:#e6ece4;--rule:#d9dcd4;--grid:#b4988c;--grid-light:#ccb9af;--field:#eeeee7;--focus:#698773;--cell:18mm;--scale:1;font-family:"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);font-size:14px;line-height:1.6;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;background:var(--desk);-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button,a,input,select,summary{touch-action:manipulation}button{transition:background-color .15s,color .15s;min-height:44px}button:disabled{opacity:.42;cursor:not-allowed}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}button:active:not(:disabled){transform:translateY(1px)}[hidden]{display:none!important}a{color:var(--book)}
+.masthead{max-width:1240px;margin:auto;padding:30px 32px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;gap:14px;align-items:center}.brand-icon{width:44px;height:44px;flex:none;color:var(--book)}h1{font-family:"Songti SC","STSong","SimSun",serif;font-weight:700;font-size:28px;letter-spacing:.07em;line-height:1.3;margin:0}.brand p{font-size:12px;letter-spacing:.12em;margin:5px 0 0;color:var(--pencil)}.edition{font-size:12px;color:var(--pencil);display:flex;align-items:center;gap:8px}.edition-dot{width:6px;height:6px;background:var(--book);border-radius:50%}
+.topbar{border-block:1px solid var(--rule);background:var(--desk)}.topbar-inner{max-width:1240px;padding:14px 32px;margin:auto;display:flex;gap:16px;align-items:center;justify-content:space-between}.tabs{display:flex;gap:4px;background:#e8e8e0;padding:4px;border-radius:8px}.tab{border:0;border-radius:5px;padding:8px 20px;background:transparent;color:var(--pencil);font-weight:500}.tab span{font-size:11px;opacity:.75;margin-left:8px;font-variant-numeric:tabular-nums}.tab[aria-pressed=true]{background:var(--paper);color:var(--book);box-shadow:0 1px 3px #263a2420}.tab:hover{color:var(--book)}.print-actions{display:flex;gap:8px}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:6px;padding:9px 16px;font-weight:500}.button:hover:not(:disabled){background:#e8eae2}.button.primary{background:var(--book);border-color:var(--book);color:#fff}.button.primary:hover:not(:disabled){background:#294b38}.button svg{width:17px;height:17px}
+.workspace{display:grid;grid-template-columns:248px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 32px 64px;align-items:start}.settings{font-size:13px}.settings h2{font-size:15px;margin:0 0 2px}.subtle{color:var(--pencil);font-size:12px;margin:0}.setting-section{border-bottom:1px solid var(--rule);padding:20px 0}.setting-section:first-child{padding-top:0}.section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.section-heading h3,.setting-section>h3{font-size:12px;font-weight:600;letter-spacing:.06em;margin:0}.text-button{min-height:36px;padding:2px 5px;background:none;border:0;color:var(--book);font-size:12px}.text-button:hover{background:var(--book-soft);border-radius:4px}.filter-list{display:grid;gap:3px}.check-label{display:flex;gap:9px;align-items:flex-start;cursor:pointer;min-height:36px;padding:6px 0}.check-label input{accent-color:var(--book);margin:4px 0 0;width:15px;height:15px;flex:none}.check-label .label-text{flex:1}.check-label small{color:var(--pencil);font-variant-numeric:tabular-nums;padding-top:1px}.toggle{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:transparent;padding:8px 0;gap:10px;text-align:left;color:var(--ink)}.toggle-track{display:block;width:34px;height:20px;background:#cbd0c7;border-radius:20px;padding:3px;flex:none}.toggle-track:after{content:"";display:block;width:14px;height:14px;background:white;border-radius:50%;transition:transform .15s}.toggle[aria-pressed=true] .toggle-track{background:var(--book)}.toggle[aria-pressed=true] .toggle-track:after{transform:translateX(14px)}.toggle:hover .label-text{color:var(--book)}.hint{font-size:11px;line-height:1.8;color:var(--pencil);margin:3px 0 0}.field{display:grid;gap:6px;margin-top:12px}.field input,.field select{width:100%;height:40px;padding:8px 10px;background:var(--field);border:1px solid var(--rule);border-radius:5px;color:var(--ink)}.field select{cursor:pointer}.note-card{padding:14px 0;color:var(--pencil);font-size:11px;line-height:1.9}.note-card strong{font-weight:500;color:var(--ink)}details{margin-top:12px}summary{cursor:pointer;color:var(--pencil);font-size:12px;min-height:32px}.source-note p{margin:6px 0;font-size:11px;color:var(--pencil)}.source-note ul{padding-left:18px;font-size:11px;color:var(--pencil)}.source-note li{margin-bottom:5px}.license{max-height:240px;overflow:auto;font-size:10px;white-space:pre-wrap;word-break:break-word}
+.preview{min-width:0}.preview-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px;gap:12px}.preview-heading h2{font-family:"Songti SC","SimSun",serif;font-size:22px;line-height:1.4;margin:0}.preview-heading p{margin:4px 0 0;font-size:12px;color:var(--pencil)}.paper-label{font-size:11px;letter-spacing:.05em;color:var(--pencil);white-space:nowrap}.page-container{display:flex;flex-direction:column;align-items:center;gap:24px}.sheet{width:210mm;height:297mm;flex:none;padding:14mm 15mm 12mm;background:var(--paper);box-shadow:0 2px 14px #2a392a10;position:relative;zoom:var(--scale);color:#242d27;--cell:18mm}.sheet-header{height:29mm}.sheet-topline{display:flex;justify-content:space-between;align-items:center;font-size:9px;letter-spacing:.1em;color:#70766e;border-bottom:.25mm solid #c5cbc1;padding-bottom:3mm}.sheet-heading{display:flex;justify-content:space-between;align-items:center;padding-top:3.5mm}.sheet-title{font-family:"Songti SC","SimSun",serif;font-size:22px;font-weight:700;letter-spacing:.08em;line-height:1.4}.sheet-title span{font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:10px;letter-spacing:0;font-weight:400;color:#656c64;margin-left:4mm}.personal{font-size:10px;display:flex;gap:6mm;color:#565f55}.personal span{display:inline-block;min-width:18mm;max-width:34mm;border-bottom:.2mm solid #a5aea0;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}.sheet-body{height:234mm}.group-title{height:9mm;margin:0;font-size:11px;font-weight:500;display:flex;align-items:center;gap:2.5mm;color:#4c5d4f}.group-title .group-index{font-family:Georgia,serif;font-size:14px;color:#788a77}.group-title small{font-size:9px;font-weight:400;color:#798174}.reading-row{display:flex;height:35mm;align-items:flex-start;padding-bottom:5mm}.reading-cell{width:var(--cell);flex:none}.pinyin-box{position:relative;width:var(--cell);height:12mm;border-left:.25mm solid var(--grid);border-top:.25mm solid var(--grid);border-bottom:.25mm solid var(--grid);display:flex;align-items:center;justify-content:center}.reading-cell:last-child .pinyin-box{border-right:.25mm solid var(--grid)}.pinyin-rule{position:absolute;left:0;right:0;border-top:.18mm solid var(--grid-light)}.pinyin-rule.first{top:33.333%}.pinyin-rule.second{top:66.667%}.pinyin-answer{position:relative;z-index:1;font-family:"Arial","Helvetica",sans-serif;font-size:16px;line-height:1;font-weight:400;color:#3b5144;visibility:hidden;transform:translateY(-.25mm)}.show-pinyin .pinyin-answer{visibility:visible}.tian{width:var(--cell);height:var(--cell);position:relative;flex:none;border:.25mm solid var(--grid);border-right:0;display:flex;align-items:center;justify-content:center}.tian:before,.tian:after{content:"";position:absolute;pointer-events:none;z-index:0}.tian:before{width:100%;left:0;top:50%;border-top:.18mm dashed var(--grid-light)}.tian:after{height:100%;top:0;left:50%;border-left:.18mm dashed var(--grid-light)}.reading-cell .tian{border-top:0}.reading-cell:last-child .tian,.write-grid .tian:last-child{border-right:.25mm solid var(--grid)}.glyph{width:84%;height:84%;position:relative;z-index:1;overflow:visible}.glyph path{fill:currentColor}.glyph-fallback{font-family:"Kaiti SC","STKaiti","KaiTi",serif;font-size:42px}.write-row{height:27mm}.write-row.with-strokes{height:44mm}.row-meta{height:5mm;display:flex;justify-content:space-between;align-items:flex-start;color:#788072;font-size:9px;line-height:4mm}.row-meta .examples{color:#5d695b;margin-left:3mm}.row-meta .ordinal{font-family:Georgia,serif;font-variant-numeric:tabular-nums;color:#85907f}.row-meta button{min-height:0;height:4mm;padding:0;border:0;background:none;color:var(--book);font-size:9px;line-height:4mm}.row-meta button:hover{text-decoration:underline}.write-grid{display:flex;width:180mm}.example-cell{color:#202b24;background:#f7f8f3}.example-cell button{border:0;min-height:0;background:none;color:inherit;width:100%;height:100%;padding:0;display:flex;align-items:center;justify-content:center}.example-cell button:hover{background:#e9eee4}.example-cell button:focus-visible{outline-offset:-3px}.stroke-strip{height:17mm;display:flex;align-items:flex-start;padding-top:2mm;gap:1mm}.stroke-label{width:8mm;font-size:8px;line-height:1.6;color:#74806e;padding-top:2mm}.stroke-step{margin:0;width:10mm;flex:none;text-align:center}.stroke-mini{width:10mm;height:10mm;border:.15mm solid #d9ded4;position:relative}.stroke-mini .glyph{width:92%;height:92%}.stroke-step figcaption{font-family:Arial,sans-serif;font-size:7px;line-height:3mm;color:#6f7e68}.stroke-mini .earlier{fill:#505d4d}.stroke-mini .latest{fill:#9b503c}.sheet-footer{height:8mm;margin-top:0;display:flex;align-items:end;justify-content:space-between;border-top:.2mm solid #d1d6cb;font-size:8px;letter-spacing:.03em;color:#78816f}.sheet-footer .page-number{font-variant-numeric:tabular-nums;color:#4d5d47}.empty{background:#fafaf6;border:1px dashed #bdc7b9;border-radius:8px;text-align:center;padding:64px 24px}.empty h3{font-size:18px;margin:0 0 8px}.empty p{color:var(--pencil);margin:0 0 20px}.preview-bottom{font-size:11px;color:var(--pencil);text-align:center;margin:20px 0}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;padding:10px 18px;border-radius:6px;z-index:10;font-size:13px}
+dialog{border:1px solid var(--rule);padding:28px;border-radius:12px;width:min(480px,calc(100vw - 32px));background:var(--paper);color:var(--ink)}dialog::backdrop{background:#1a271f66}.dialog-top{display:flex;align-items:start;justify-content:space-between;gap:10px}.dialog-top h2{font-family:"Songti SC","SimSun",serif;font-size:24px;margin:0}.dialog-top p{margin:4px 0 0;color:var(--pencil);font-size:12px}.close-dialog{background:none;border:0;color:var(--pencil);width:44px;font-size:25px;line-height:1}.animation-grid{width:220px;height:220px;border:1px solid var(--grid);margin:24px auto 12px;position:relative}.animation-grid:before,.animation-grid:after{content:"";position:absolute}.animation-grid:before{left:50%;height:100%;border-left:1px dashed var(--grid-light)}.animation-grid:after{top:50%;width:100%;border-top:1px dashed var(--grid-light)}.animation-grid svg{position:relative;width:100%;height:100%}.animation-status{text-align:center;font-size:13px;color:var(--pencil);min-height:22px}.animation-buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:18px 0 4px}.animation-note{font-size:12px;color:var(--pencil);padding-top:12px;margin:0}.noscript{padding:40px;background:#fff;text-align:center;color:#333}
+@media(max-width:1080px){.workspace{gap:24px;grid-template-columns:220px minmax(0,1fr);padding-inline:24px}.masthead,.topbar-inner{padding-inline:24px}.tab{padding-inline:12px}.paper-label{display:none}}
+@media(max-width:760px){.masthead{padding:22px 18px 18px}.edition{display:none}h1{font-size:24px}.brand-icon{width:38px;height:38px}.topbar-inner{padding:12px 16px;flex-wrap:wrap;gap:12px}.tabs{width:100%}.tab{flex:1}.print-actions{width:100%}.print-actions .button{flex:1}.workspace{display:flex;flex-direction:column;padding:20px 16px 40px;gap:24px}.settings{width:100%;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}.settings-intro{grid-column:1/-1}.setting-section:first-child{padding-bottom:12px}.setting-section{padding:12px 0}.filter-list{gap:0}.note-card,.source-note{grid-column:1/-1}.preview{width:100%}.preview-heading h2{font-size:20px}.paper-label{display:block}.page-container{gap:16px}.preview-bottom{margin:14px 0}.source-note{margin-top:0}.settings>.setting-section:nth-child(2){grid-column:1/-1}.settings>.setting-section:nth-child(2) .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}.hint{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+@page{size:A4 portrait;margin:0}
+@media print{html,body{margin:0!important;padding:0!important;width:210mm!important;background:white!important}.screen-only,.settings,.masthead,.topbar,.preview-heading,.preview-bottom,dialog,.toast,noscript{display:none!important}.workspace,.preview,.page-container{display:block!important;margin:0!important;padding:0!important;max-width:none!important;width:210mm!important}.sheet{zoom:1!important;box-shadow:none!important;margin:0!important;width:210mm!important;height:297mm!important;break-after:page;page-break-after:always;break-inside:avoid;page-break-inside:avoid;--grid:#969c90;--grid-light:#bbc0b5;print-color-adjust:exact;-webkit-print-color-adjust:exact}.sheet:last-child{break-after:auto;page-break-after:auto}.pinyin-answer{visibility:hidden!important}.example-cell{background:transparent!important}.example-cell button{background:none!important}.stroke-mini .latest{fill:#111}.stroke-mini .earlier{fill:#8b8b8b}.row-meta button{display:none!important}.empty{display:none!important}}
+</style>
+</head>
+<body>
+<header class="masthead screen-only">
+ <div class="brand"><svg class="brand-icon" viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect x="3" y="3" width="38" height="38" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M22 3v38M3 22h38" stroke="currentColor" stroke-dasharray="3 3"/><path d="M11 13h22M22 13v19M15 26l7 6 7-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h1>语文练习册</h1><p>一格一字，一笔一画。</p></div></div>
+ <div class="edition"><span class="edition-dot"></span>离线可用<span>·</span>A4 打印</div>
+</header>
+<div class="topbar screen-only"><div class="topbar-inner">
+ <nav class="tabs" aria-label="练习类型"><button class="tab" id="readingTab" aria-pressed="true" data-mode="reading">认一认<span>119 字</span></button><button class="tab" id="writingTab" aria-pressed="false" data-mode="writing">写一写<span>75 字</span></button></nav>
+ <div class="print-actions"><button class="button" id="printAll" title="打印两类中已勾选的内容">打印两类</button><button class="button primary" id="printCurrent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7z"/><path d="M16 11h1"/></svg><span>打印当前练习</span></button></div>
+</div></div>
+<main class="workspace">
+ <aside class="settings screen-only" aria-label="练习设置">
+  <div class="setting-section settings-intro"><h2>今天，练哪一页？</h2><p class="subtle">选好内容，就可以开始了。</p></div>
+  <section class="setting-section"><div class="section-heading"><h3>练习范围</h3><div><button class="text-button" id="selectAll">全选</button><button class="text-button" id="clearAll">清空</button></div></div><div id="groupFilters" class="filter-list"></div></section>
+  <section class="setting-section"><h3>屏幕提示</h3><button class="toggle" id="pinyinToggle" aria-pressed="false"><span class="label-text">显示拼音</span><span class="toggle-track" aria-hidden="true"></span></button><button class="toggle" id="strokeToggle" aria-pressed="false" hidden><span class="label-text">显示笔顺</span><span class="toggle-track" aria-hidden="true"></span></button><p class="hint" id="screenHint">先让孩子认读，需要时再打开提示。</p></section>
+  <section class="setting-section"><h3>纸张与打印</h3><label class="field"><span>田字格大小</span><select id="cellSize"><option value="18">18 mm · 每行 10 格</option><option value="20">20 mm · 每行 9 格</option></select></label><label class="field"><span>孩子的名字 <span class="subtle">（选填）</span></span><input id="studentName" maxlength="12" placeholder="留空则打印姓名横线" autocomplete="off"></label><label class="check-label" style="margin-top:12px"><input type="checkbox" id="printStrokes"><span class="label-text">打印时附带笔顺图</span></label><p class="hint">仅影响写字页。拼音栏打印时始终留空。</p></section>
+  <div class="note-card"><strong>打印小贴士</strong><br>A4 · 纵向 · 缩放 100%<br>关闭浏览器的「页眉和页脚」。<br>每页四周已预留安全边距。</div>
+  <details class="source-note"><summary>词表与读音说明</summary><p>来自你提供的 words.txt。识字 121 条去重为 119 字；写字 77 条去重为 75 字。两类之间的重合字分别保留。</p><p>原文标题中的 300 / 100 并非实际列出数量，本册没有补字。单字显示本调，多音字按当前主题选音。</p><ul id="pronunciationNotes"></ul><p>笔顺与范字：<a href="https://github.com/chanind/hanzi-writer-data" target="_blank" rel="noreferrer">Hanzi Writer Data</a> / <a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noreferrer">Make Me a Hanzi</a>。数据字形供练习参考，教学以孩子的教材为准。</p><details><summary>数据许可</summary><p>2026-10-31 选取并汇编 153 字，单字矢量数据未修改。Arphic 字形与笔顺数据遵循 Arphic Public License。</p><pre class="license">__LICENSE__</pre></details></details>
+ </aside>
+ <section class="preview" aria-labelledby="previewTitle"><div class="preview-heading screen-only"><div><h2 id="previewTitle">拼音田字格</h2><p id="previewSummary" role="status" aria-live="polite"></p></div><div class="paper-label">A4 / 210 × 297 mm</div></div><div id="pages" class="page-container"></div><div class="preview-bottom screen-only">屏幕上的提示，只在需要时出现。纸上的空白，留给孩子。</div></section>
+</main>
+<dialog id="strokeDialog" aria-labelledby="dialogTitle"><div class="dialog-top"><div><h2 id="dialogTitle">笔顺演示</h2><p id="dialogSubtitle"></p></div><button class="close-dialog" id="closeDialog" aria-label="关闭笔顺演示">×</button></div><div class="animation-grid" id="animationGrid"></div><div class="animation-status" id="animationStatus" aria-live="polite"></div><div class="animation-buttons"><button class="button" id="previousStroke">上一步</button><button class="button primary" id="playStroke">播放笔顺</button><button class="button" id="nextStroke">下一步</button><button class="text-button" id="resetStroke">重置</button></div><p class="animation-note" id="animationNote"></p></dialog>
+<noscript><div class="noscript">请使用启用 JavaScript 的浏览器打开本文件。所有词表、拼音和笔顺均已内嵌，无须联网。</div></noscript>
+<script type="application/json" id="wordData">__WORDS__</script>
+<script type="application/json" id="strokeData">__STROKES__</script>
+<script>
+(() => {
+ 'use strict';
+ const DATA=JSON.parse(document.getElementById('wordData').textContent), STROKES=JSON.parse(document.getElementById('strokeData').textContent);
+ const $=id=>document.getElementById(id), esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const groupsFor=mode=>DATA[mode+'Groups'];
+ const state={mode:'reading',cellSize:18,pinyin:false,strokes:false,printStrokes:false,name:'',selected:{reading:new Set(DATA.readingGroups.map(g=>g.id)),writing:new Set(DATA.writingGroups.map(g=>g.id))}};
+ let printing=false,printScope='current',frame=0,animationToken=0,currentItem=null,step=0,playing=false;
+ const allWriting=DATA.writingGroups.flatMap(g=>g.items);
+ const shortNames={'units-1-2':'第 1–2 单元','units-3-4':'第 3–4 单元','units-5-8':'第 5–8 单元'};
+ const selectedGroups=mode=>groupsFor(mode).filter(g=>state.selected[mode].has(g.id));
+ const count=mode=>selectedGroups(mode).reduce((sum,g)=>sum+g.items.length,0);
+ const totalStrokes=char=>STROKES[char]?.strokes.length||0;
+ function glyph(char,until=Infinity,highlight=false){
+  const strokes=STROKES[char]?.strokes;
+  if(!strokes)return `<span class="glyph-fallback">${esc(char)}</span>`;
+  const paths=strokes.slice(0,until).map((d,i)=>`<path d="${esc(d)}"${highlight?` class="${i===until-1?'latest':'earlier'}"`:''}/>`).join('');
+  return `<svg class="glyph" viewBox="0 0 1024 1024" role="img" aria-label="${esc(char)}"><g transform="translate(0 900) scale(1 -1)">${paths}</g></svg>`;
+ }
+ function gridCell(char='',example=false){return `<div class="tian${example?' example-cell':''}"${char?` data-char="${esc(char)}"`:''}>${char?(example?`<button class="character-button" data-demo="${esc(char)}" aria-label="查看${esc(char)}的笔顺">${glyph(char)}</button>`:glyph(char)):''}</div>`;}
+ function readingRow(items){return `<div class="reading-row">${items.map(item=>`<div class="reading-cell" data-char="${esc(item.char)}"${item.note?` title="${esc(item.note)}"`:''}><div class="pinyin-box"><span class="pinyin-rule first"></span><span class="pinyin-rule second"></span><span class="pinyin-answer">${esc(item.pinyin)}</span></div>${gridCell(item.char)}</div>`).join('')}</div>`;}
+ function strokeStrip(char){return `<div class="stroke-strip" aria-label="${esc(char)}的逐笔顺序"><span class="stroke-label">笔顺</span>${STROKES[char].strokes.map((_,i)=>`<figure class="stroke-step"><div class="stroke-mini">${glyph(char,i+1,true)}</div><figcaption>${i+1}</figcaption></figure>`).join('')}</div>`;}
+ function writingRow(item,ordinal,withStrokes){
+  const columns=Math.floor(180/state.cellSize);
+  return `<div class="write-row${withStrokes?' with-strokes':''}" data-char="${esc(item.char)}"><div class="row-meta"><span><span class="ordinal">${String(ordinal).padStart(2,'0')}</span><span class="examples">${item.words?.length?esc(item.words.join(' · ')):''}</span></span><span>${totalStrokes(item.char)} 画${withStrokes?`　<button class="screen-only" data-demo="${esc(item.char)}">播放笔顺 ↗</button>`:''}</span></div><div class="write-grid">${gridCell(item.char,true)}${Array.from({length:columns-1},()=>gridCell()).join('')}</div>${withStrokes?strokeStrip(item.char):''}</div>`;
+ }
+ function paginate(mode,isPrint){
+  const withStrokes=mode==='writing'&&(isPrint?state.printStrokes:state.strokes),pages=[];
+  const cell=state.cellSize,columns=Math.floor(180/cell),rowHeight=mode==='reading'?cell+17:cell+9+(withStrokes?17:0),capacity=234;
+  let blocks=[],used=0,ordinal=0;
+  const finish=()=>{if(blocks.length)pages.push({mode,blocks,withStrokes});blocks=[];used=0;};
+  selectedGroups(mode).forEach((group,groupIndex)=>{
+   const rows=mode==='reading'?Array.from({length:Math.ceil(group.items.length/columns)},(_,i)=>group.items.slice(i*columns,(i+1)*columns)):group.items.map(item=>[item]);
+   let needsHeading=true,continued=false;
+   rows.forEach((items,rowIndex)=>{
+    if(used+rowHeight+(needsHeading?9:0)>capacity){finish();needsHeading=true;continued=rowIndex>0;}
+    if(needsHeading){blocks.push({kind:'heading',group,groupIndex,continued});used+=9;needsHeading=false;}
+    ordinal+=items.length;
+    blocks.push({kind:'row',items,ordinal:ordinal-items.length+1});used+=rowHeight;
+   });
+  });finish();return pages;
+ }
+ function pageHTML(page,index,total){
+  const reading=page.mode==='reading';
+  const title=reading?'认一认':'写一写',instruction=reading?'读汉字，在上方写拼音':'看范字，每个字写一行';
+  const blockHTML=page.blocks.map(block=>block.kind==='heading'?`<h3 class="group-title"><span class="group-index">${String(groupsFor(page.mode).findIndex(g=>g.id===block.group.id)+1).padStart(2,'0')}</span>${esc(block.group.title)}${block.continued?'<small>（续）</small>':''}</h3>`:reading?readingRow(block.items):writingRow(block.items[0],block.ordinal,page.withStrokes)).join('');
+  return `<article class="sheet ${page.mode}-sheet" aria-label="${title}，第${index+1}页" style="--cell:${state.cellSize}mm"><header class="sheet-header"><div class="sheet-topline"><span>语 文 练 习 册</span><span>${reading?'拼音田字格':'田字格'} · ${state.cellSize} mm</span></div><div class="sheet-heading"><div class="sheet-title">${title}<span>${instruction}</span></div><div class="personal"><div>姓名 <span>${esc(state.name)||'&nbsp;'}</span></div><div>日期 <span>&nbsp;</span></div></div></div></header><div class="sheet-body">${blockHTML}</div><footer class="sheet-footer"><span>${reading?'看清字形，读准字音。':'头正、肩平、身直、足安。'}</span><span class="page-number">${String(index+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}</span></footer></article>`;
+ }
+ function fitPages(){if(printing)return;const available=$('pages').clientWidth;document.documentElement.style.setProperty('--scale',Math.min(1,available/(210*96/25.4)));}
+ function render(isPrint=false,scope='current'){
+  const modes=scope==='all'?['reading','writing']:[state.mode];
+  const pages=modes.flatMap(mode=>paginate(mode,isPrint));
+  $('pages').classList.toggle('show-pinyin',state.pinyin&&!isPrint);
+  $('pages').innerHTML=pages.length?pages.map((p,i)=>pageHTML(p,i,pages.length)).join(''):'<div class="empty screen-only"><h3>先选一组汉字吧</h3><p>在左侧勾选练习范围，或一键选择全部。</p><button class="button primary" id="emptySelectAll">选择全部</button></div>';
+  // Layout sizes stay in millimetres, including the optional 20 mm setting.
+  $('pages').querySelectorAll('.reading-row').forEach(el=>el.style.height=(state.cellSize+17)+'mm');
+  $('pages').querySelectorAll('.write-row').forEach(el=>el.style.height=(state.cellSize+9+(el.classList.contains('with-strokes')?17:0))+'mm');
+  if(!isPrint){$('previewTitle').textContent=state.mode==='reading'?'拼音田字格':'一字一行 · 田字格';$('previewSummary').textContent=`已选 ${count(state.mode)} 字 · 屏幕 ${pages.length} 页 · 打印 ${paginate(state.mode,true).length} 页${state.mode==='writing'?` · 每行 1 个范字 + ${Math.floor(180/state.cellSize)-1} 个空格`:''}`;$('printCurrent').disabled=!count(state.mode);$('printAll').disabled=!(count('reading')+count('writing'));fitPages();}
+ }
+ function updateFilters(){
+  $('groupFilters').innerHTML=groupsFor(state.mode).map(group=>`<label class="check-label"><input type="checkbox" data-group="${esc(group.id)}"${state.selected[state.mode].has(group.id)?' checked':''}><span class="label-text">${esc(shortNames[group.id]||group.title)}</span><small>${group.items.length}</small></label>`).join('');
+ }
+ function syncControls(){
+  document.querySelectorAll('[data-mode]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mode===state.mode)));
+  $('pinyinToggle').hidden=state.mode!=='reading';$('strokeToggle').hidden=state.mode!=='writing';
+  $('pinyinToggle').setAttribute('aria-pressed',String(state.pinyin));$('pinyinToggle').querySelector('.label-text').textContent=state.pinyin?'隐藏拼音':'显示拼音';
+  $('strokeToggle').setAttribute('aria-pressed',String(state.strokes));$('strokeToggle').querySelector('.label-text').textContent=state.strokes?'隐藏笔顺':'显示笔顺';
+  $('screenHint').textContent=state.mode==='reading'?'先让孩子认读，需要时再打开提示。打印时拼音仍为空白。':'打开可看逐笔图示；点击首格范字，还能播放笔顺。';
+ }
+ document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{state.mode=button.dataset.mode;updateFilters();syncControls();render();}));
+ $('groupFilters').addEventListener('change',event=>{const id=event.target.dataset.group;if(!id)return;event.target.checked?state.selected[state.mode].add(id):state.selected[state.mode].delete(id);render();});
+ function selectAll(){state.selected[state.mode]=new Set(groupsFor(state.mode).map(g=>g.id));updateFilters();render();}
+ $('selectAll').addEventListener('click',selectAll);$('clearAll').addEventListener('click',()=>{state.selected[state.mode].clear();updateFilters();render();});
+ $('pinyinToggle').addEventListener('click',()=>{state.pinyin=!state.pinyin;syncControls();$('pages').classList.toggle('show-pinyin',state.pinyin);});
+ $('strokeToggle').addEventListener('click',()=>{state.strokes=!state.strokes;syncControls();render();});
+ $('cellSize').addEventListener('change',event=>{state.cellSize=Number(event.target.value);render();});
+ $('studentName').addEventListener('input',event=>{state.name=event.target.value.trim();cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>render());});
+ $('printStrokes').addEventListener('change',event=>{state.printStrokes=event.target.checked;render();});
+ function beforePrint(){stopAnimation();printing=true;render(true,printScope);}
+ function afterPrint(){printing=false;printScope='current';render();}
+ function print(scope){printScope=scope;beforePrint();window.print();}
+ $('printCurrent').addEventListener('click',()=>print('current'));$('printAll').addEventListener('click',()=>print('all'));
+ window.addEventListener('beforeprint',beforePrint);window.addEventListener('afterprint',afterPrint);
+ window.addEventListener('resize',()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(fitPages);});
+ if(window.ResizeObserver)new ResizeObserver(fitPages).observe($('pages'));
+ const notes=new Map();[...DATA.readingGroups,...DATA.writingGroups].flatMap(g=>g.items).forEach(item=>{if(item.note&&!notes.has(item.char))notes.set(item.char,item.note);});
+ $('pronunciationNotes').innerHTML=Array.from(notes,([char,note])=>`<li><strong>${esc(char)}</strong>：${esc(note)}</li>`).join('');
+ function stopAnimation(){animationToken++;playing=false;$('playStroke').textContent='播放笔顺';}
+ function updateAnimationStatus(){const total=totalStrokes(currentItem.char);$('animationStatus').textContent=step?`第 ${step} 笔 / 共 ${total} 笔`:`准备好了 · 共 ${total} 笔`;$('previousStroke').disabled=step===0||playing;$('nextStroke').disabled=step===total||playing;}
+ function drawAnimation(){
+  const data=STROKES[currentItem.char];
+  $('animationGrid').innerHTML=`<svg viewBox="0 0 1024 1024" role="img" aria-label="${esc(currentItem.char)}，已写${step}笔"><g transform="translate(0 900) scale(1 -1)">${data.strokes.map(d=>`<path d="${esc(d)}" fill="#edf0e9"/>`).join('')}${data.strokes.slice(0,step).map((d,i)=>`<path d="${esc(d)}" fill="${i===step-1?'#9b503c':'#314b37'}"/>`).join('')}</g></svg>`;
+  updateAnimationStatus();
+ }
+ function openDemo(char){
+  stopAnimation();currentItem=allWriting.find(item=>item.char===char);if(!currentItem)return;step=0;
+  $('dialogTitle').textContent=char+' · 笔顺';$('dialogSubtitle').textContent=currentItem.pinyin+'　'+totalStrokes(char)+' 画';$('animationNote').textContent=currentItem.note||'观察每一笔的位置和方向，再在纸上试一试。';drawAnimation();$('strokeDialog').showModal();
+ }
+ $('pages').addEventListener('click',event=>{const button=event.target.closest('[data-demo]');if(button)openDemo(button.dataset.demo);if(event.target.closest('#emptySelectAll'))selectAll();});
+ $('closeDialog').addEventListener('click',()=>$('strokeDialog').close());$('strokeDialog').addEventListener('close',()=>{stopAnimation();});
+ $('strokeDialog').addEventListener('click',event=>{if(event.target===$('strokeDialog')){const rect=event.target.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)event.target.close();}});
+ $('previousStroke').addEventListener('click',()=>{stopAnimation();step=Math.max(0,step-1);drawAnimation();});$('nextStroke').addEventListener('click',()=>{stopAnimation();step=Math.min(totalStrokes(currentItem.char),step+1);drawAnimation();});$('resetStroke').addEventListener('click',()=>{stopAnimation();step=0;drawAnimation();});
+ const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+ $('playStroke').addEventListener('click',async()=>{
+  if(playing){stopAnimation();drawAnimation();return;}
+  stopAnimation();const token=animationToken;playing=true;step=0;$('playStroke').textContent='停止播放';drawAnimation();
+  const data=STROKES[currentItem.char],reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  for(let i=0;i<data.strokes.length;i++){
+   if(token!==animationToken)return;
+   if(!reduced){
+    const svg=$('animationGrid').querySelector('svg'),ns='http://www.w3.org/2000/svg';
+    const group=document.createElementNS(ns,'g');group.setAttribute('transform','translate(0 900) scale(1 -1)');
+    const id='stroke-clip-'+token+'-'+i,defs=document.createElementNS(ns,'defs'),clip=document.createElementNS(ns,'clipPath'),outline=document.createElementNS(ns,'path');clip.id=id;outline.setAttribute('d',data.strokes[i]);clip.appendChild(outline);defs.appendChild(clip);group.appendChild(defs);
+    const path=document.createElementNS(ns,'path');path.setAttribute('d',data.medians[i].map((p,j)=>(j?'L':'M')+p.join(' ')).join(' '));path.setAttribute('fill','none');path.setAttribute('stroke','#9b503c');path.setAttribute('stroke-width','180');path.setAttribute('stroke-linecap','round');path.setAttribute('stroke-linejoin','round');path.setAttribute('clip-path',`url(#${id})`);group.appendChild(path);svg.appendChild(group);
+    const length=path.getTotalLength();path.style.strokeDasharray=String(length);path.style.strokeDashoffset=String(length);
+    const anim=path.animate([{strokeDashoffset:String(length)},{strokeDashoffset:'0'}],{duration:520,easing:'linear',fill:'forwards'});await anim.finished.catch(()=>{});
+   }else{await delay(220);}
+   if(token!==animationToken)return;step=i+1;drawAnimation();await delay(250);
+  }
+  if(token===animationToken){playing=false;$('playStroke').textContent='再看一遍';updateAnimationStatus();}
+ });
+ updateFilters();syncControls();render();
+})();
+</script>
+</body>
+</html>

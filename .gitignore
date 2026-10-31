@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+_site/
+检查/
+.env
+.env.*
+!.env.example

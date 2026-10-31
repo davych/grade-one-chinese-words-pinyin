@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="离线语文练习册：拼音田字格、逐字书写、笔顺演示，适合 A4 打印。">
+<meta name="description" content="按语文园地一至八选择课次：识字表写拼音，写字表练写字，支持 A4 打印与离线使用。">
 <title>语文练习册 · 一格一字，一笔一画</title>
 <style>
 :root{--desk:#f3f1eb;--paper:#fff;--ink:#29352e;--pencil:#647067;--quiet:#879087;--book:#365c47;--book-soft:#e6ece4;--rule:#d9dcd4;--grid:#b4988c;--grid-light:#ccb9af;--field:#eeeee7;--focus:#698773;--cell:18mm;--scale:1;font-family:"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);font-size:14px;line-height:1.6;font-synthesis:none}
@@ -15,6 +15,8 @@
 dialog{border:1px solid var(--rule);padding:28px;border-radius:12px;width:min(480px,calc(100vw - 32px));background:var(--paper);color:var(--ink)}dialog::backdrop{background:#1a271f66}.dialog-top{display:flex;align-items:start;justify-content:space-between;gap:10px}.dialog-top h2{font-family:"Songti SC","SimSun",serif;font-size:24px;margin:0}.dialog-top p{margin:4px 0 0;color:var(--pencil);font-size:12px}.close-dialog{background:none;border:0;color:var(--pencil);width:44px;font-size:25px;line-height:1}.animation-grid{width:220px;height:220px;border:1px solid var(--grid);margin:24px auto 12px;position:relative}.animation-grid:before,.animation-grid:after{content:"";position:absolute}.animation-grid:before{left:50%;height:100%;border-left:1px dashed var(--grid-light)}.animation-grid:after{top:50%;width:100%;border-top:1px dashed var(--grid-light)}.animation-grid svg{position:relative;width:100%;height:100%}.animation-status{text-align:center;font-size:13px;color:var(--pencil);min-height:22px}.animation-buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:18px 0 4px}.animation-note{font-size:12px;color:var(--pencil);padding-top:12px;margin:0}.noscript{padding:40px;background:#fff;text-align:center;color:#333}
 @media(max-width:1080px){.workspace{gap:24px;grid-template-columns:220px minmax(0,1fr);padding-inline:24px}.masthead,.topbar-inner{padding-inline:24px}.tab{padding-inline:12px}.paper-label{display:none}}
 @media(max-width:760px){.masthead{padding:22px 18px 18px}.edition{display:none}h1{font-size:24px}.brand-icon{width:38px;height:38px}.topbar-inner{padding:12px 16px;flex-wrap:wrap;gap:12px}.tabs{width:100%}.tab{flex:1}.print-actions{width:100%}.print-actions .button{flex:1}.workspace{display:flex;flex-direction:column;padding:20px 16px 40px;gap:24px}.settings{width:100%;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}.settings-intro{grid-column:1/-1}.setting-section:first-child{padding-bottom:12px}.setting-section{padding:12px 0}.filter-list{gap:0}.note-card,.source-note{grid-column:1/-1}.preview{width:100%}.preview-heading h2{font-size:20px}.paper-label{display:block}.page-container{gap:16px}.preview-bottom{margin:14px 0}.source-note{margin-top:0}.settings>.setting-section:nth-child(2){grid-column:1/-1}.settings>.setting-section:nth-child(2) .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}.hint{font-size:11px}}
+.chapter-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:12px}.chapter-button{border:1px solid var(--rule);border-radius:5px;background:transparent;padding:8px 2px;color:var(--pencil);font-size:12px}.chapter-button[aria-pressed=true]{background:var(--book);border-color:var(--book);color:white}.chapter-button:hover:not([aria-pressed=true]){background:var(--book-soft);color:var(--book)}.chapter-button.all-chapters{grid-column:1/-1}.chapter-scope{font-size:12px;color:var(--book);margin:0 0 6px}.lesson-group{margin:0;padding:4px 0 8px;border:0}.lesson-group+.lesson-group{border-top:1px solid var(--rule);margin-top:8px;padding-top:10px}.lesson-group summary{font-weight:500;min-height:36px}.lesson-controls{display:flex;gap:6px}.practice-badge{display:block;font-size:8px;height:4mm;line-height:4mm;color:#687a60;text-align:center}.reading-cell.additional .glyph{color:#42674c}.practice-guide{margin:8px 0 0;color:var(--pencil);font-size:12px}.chapter-caption{font-weight:500;letter-spacing:.04em;color:#50634d}.book-count{font-variant-numeric:tabular-nums}.scope-context{color:var(--book);font-size:12px;margin:0 0 4px;letter-spacing:.04em}.range-section .section-heading{margin-bottom:4px}.range-section .filter-list{gap:0}.sheet-title{font-size:21px}.sheet-title span{font-size:9px;margin-left:3mm}.personal{gap:4mm}.sheet-topline{letter-spacing:.06em}
+@media(max-width:760px){.chapter-section,.range-section{grid-column:1/-1}.settings>.chapter-section .filter-list{grid-template-columns:1fr}.range-section>.filter-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}.range-section .lesson-group{grid-column:1/-1}.chapter-buttons{grid-template-columns:repeat(4,minmax(0,1fr))}.chapter-button.all-chapters{grid-column:1/-1}.preview-heading{align-items:start}.paper-label{display:none}.tab{padding-inline:8px;font-size:13px}.tab span{margin-left:5px}.lesson-group .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
 @page{size:A4 portrait;margin:0}
 @media print{html,body{margin:0!important;padding:0!important;width:210mm!important;background:white!important}.screen-only,.settings,.masthead,.topbar,.preview-heading,.preview-bottom,dialog,.toast,noscript{display:none!important}.workspace,.preview,.page-container{display:block!important;margin:0!important;padding:0!important;max-width:none!important;width:210mm!important}.sheet{zoom:1!important;box-shadow:none!important;margin:0!important;width:210mm!important;height:297mm!important;break-after:page;page-break-after:always;break-inside:avoid;page-break-inside:avoid;--grid:#969c90;--grid-light:#bbc0b5;print-color-adjust:exact;-webkit-print-color-adjust:exact}.sheet:last-child{break-after:auto;page-break-after:auto}.pinyin-answer{visibility:hidden!important}.example-cell{background:transparent!important}.example-cell button{background:none!important}.stroke-mini .latest{fill:#111}.stroke-mini .earlier{fill:#8b8b8b}.row-meta button{display:none!important}.empty{display:none!important}}
@@ -26,19 +28,20 @@ dialog{border:1px solid var(--rule);padding:28px;border-radius:12px;width:min(48
  <div class="edition"><span class="edition-dot"></span>离线可用<span>·</span>A4 打印</div>
 </header>
 <div class="topbar screen-only"><div class="topbar-inner">
- <nav class="tabs" aria-label="练习类型"><button class="tab" id="readingTab" aria-pressed="true" data-mode="reading">认一认<span>119 字</span></button><button class="tab" id="writingTab" aria-pressed="false" data-mode="writing">写一写<span>75 字</span></button></nav>
+ <nav class="tabs" aria-label="练习类型"><button class="tab" id="readingTab" aria-pressed="true" data-mode="reading">识字表 · 写拼音<span id="readingTotal"></span></button><button class="tab" id="writingTab" aria-pressed="false" data-mode="writing">写字表 · 练写字<span id="writingTotal"></span></button></nav>
  <div class="print-actions"><button class="button" id="printAll" title="打印两类中已勾选的内容">打印两类</button><button class="button primary" id="printCurrent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7z"/><path d="M16 11h1"/></svg><span>打印当前练习</span></button></div>
 </div></div>
 <main class="workspace">
  <aside class="settings screen-only" aria-label="练习设置">
-  <div class="setting-section settings-intro"><h2>今天，练哪一页？</h2><p class="subtle">选好内容，就可以开始了。</p></div>
-  <section class="setting-section"><div class="section-heading"><h3>练习范围</h3><div><button class="text-button" id="selectAll">全选</button><button class="text-button" id="clearAll">清空</button></div></div><div id="groupFilters" class="filter-list"></div></section>
+  <div class="setting-section settings-intro"><h2>今天，练哪一章？</h2><p class="subtle">跟着教材，按章节练习。</p></div>
+  <section class="setting-section chapter-section"><h3>选择语文园地</h3><div id="chapterButtons" class="chapter-buttons" role="group" aria-label="选择章节"></div><p class="hint" style="margin-top:10px">每章包含园地前的课次与园地本身。切换练习类型，保留当前章节。</p></section>
+  <section class="setting-section range-section"><div class="section-heading"><h3>勾选课次</h3><div class="lesson-controls"><button class="text-button" id="selectAll">全选</button><button class="text-button" id="gardenOnly">仅园地</button><button class="text-button" id="clearAll">清空</button></div></div><div id="groupFilters" class="filter-list"></div></section>
   <section class="setting-section"><h3>屏幕提示</h3><button class="toggle" id="pinyinToggle" aria-pressed="false"><span class="label-text">显示拼音</span><span class="toggle-track" aria-hidden="true"></span></button><button class="toggle" id="strokeToggle" aria-pressed="false" hidden><span class="label-text">显示笔顺</span><span class="toggle-track" aria-hidden="true"></span></button><p class="hint" id="screenHint">先让孩子认读，需要时再打开提示。</p></section>
   <section class="setting-section"><h3>纸张与打印</h3><label class="field"><span>田字格大小</span><select id="cellSize"><option value="18">18 mm · 每行 10 格</option><option value="20">20 mm · 每行 9 格</option></select></label><label class="field"><span>孩子的名字 <span class="subtle">（选填）</span></span><input id="studentName" maxlength="12" placeholder="留空则打印姓名横线" autocomplete="off"></label><label class="check-label" style="margin-top:12px"><input type="checkbox" id="printStrokes"><span class="label-text">打印时附带笔顺图</span></label><p class="hint">仅影响写字页。拼音栏打印时始终留空。</p></section>
   <div class="note-card"><strong>打印小贴士</strong><br>A4 · 纵向 · 缩放 100%<br>关闭浏览器的「页眉和页脚」。<br>每页四周已预留安全边距。</div>
-  <details class="source-note"><summary>词表与读音说明</summary><p>来自你提供的 words.txt。识字 121 条去重为 119 字；写字 77 条去重为 75 字。两类之间的重合字分别保留。</p><p>原文标题中的 300 / 100 并非实际列出数量，本册没有补字。单字显示本调，多音字按当前主题选音。</p><ul id="pronunciationNotes"></ul><p>笔顺与范字：<a href="https://github.com/chanind/hanzi-writer-data" target="_blank" rel="noreferrer">Hanzi Writer Data</a> / <a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noreferrer">Make Me a Hanzi</a>。数据字形供练习参考，教学以孩子的教材为准。</p><details><summary>数据许可</summary><p>2026-10-31 选取并汇编 153 字，单字矢量数据未修改。Arphic 字形与笔顺数据遵循 Arphic Public License。</p><pre class="license">__LICENSE__</pre></details></details>
+  <details class="source-note"><summary>教材与读音说明</summary><p id="sourceSummary"></p><p>以提供的四张教材照片为准，按原顺序划分到语文园地一至八，保留每课和园地自身的内容。识字表用来填写拼音，写字表用来练习汉字。</p><p>蓝色多音字也保留为独立练习项，格下标注“多音字”。拼音、轻声按教材标注，不跨课去重。写字表园地二、三、四各只有 2 字，与照片一致。</p><ul id="pronunciationNotes"></ul><p>笔顺与范字：<a href="https://github.com/chanind/hanzi-writer-data" target="_blank" rel="noreferrer">Hanzi Writer Data</a> / <a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noreferrer">Make Me a Hanzi</a>。教学笔顺以孩子的教材为准。</p><details><summary>数据许可</summary><p id="licenseSummary"></p><pre class="license">__LICENSE__</pre></details></details>
  </aside>
- <section class="preview" aria-labelledby="previewTitle"><div class="preview-heading screen-only"><div><h2 id="previewTitle">拼音田字格</h2><p id="previewSummary" role="status" aria-live="polite"></p></div><div class="paper-label">A4 / 210 × 297 mm</div></div><div id="pages" class="page-container"></div><div class="preview-bottom screen-only">屏幕上的提示，只在需要时出现。纸上的空白，留给孩子。</div></section>
+ <section class="preview" aria-labelledby="previewTitle"><div class="preview-heading screen-only"><div><div id="scopeContext" class="scope-context"></div><h2 id="previewTitle">识字表 · 写拼音</h2><p id="previewSummary" role="status" aria-live="polite"></p><p class="practice-guide" id="practiceGuide"></p></div><div class="paper-label">A4 / 210 × 297 mm</div></div><div id="pages" class="page-container"></div><div class="preview-bottom screen-only">只打印当前章节内勾选的内容；全册打印时，每章从新的一页开始。</div></section>
 </main>
 <dialog id="strokeDialog" aria-labelledby="dialogTitle"><div class="dialog-top"><div><h2 id="dialogTitle">笔顺演示</h2><p id="dialogSubtitle"></p></div><button class="close-dialog" id="closeDialog" aria-label="关闭笔顺演示">×</button></div><div class="animation-grid" id="animationGrid"></div><div class="animation-status" id="animationStatus" aria-live="polite"></div><div class="animation-buttons"><button class="button" id="previousStroke">上一步</button><button class="button primary" id="playStroke">播放笔顺</button><button class="button" id="nextStroke">下一步</button><button class="text-button" id="resetStroke">重置</button></div><p class="animation-note" id="animationNote"></p></dialog>
 <noscript><div class="noscript">请使用启用 JavaScript 的浏览器打开本文件。所有词表、拼音和笔顺均已内嵌，无须联网。</div></noscript>
@@ -50,12 +53,14 @@ dialog{border:1px solid var(--rule);padding:28px;border-radius:12px;width:min(48
  const DATA=JSON.parse(document.getElementById('wordData').textContent), STROKES=JSON.parse(document.getElementById('strokeData').textContent);
  const $=id=>document.getElementById(id), esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const groupsFor=mode=>DATA[mode+'Groups'];
- const state={mode:'reading',cellSize:18,pinyin:false,strokes:false,printStrokes:false,name:'',selected:{reading:new Set(DATA.readingGroups.map(g=>g.id)),writing:new Set(DATA.writingGroups.map(g=>g.id))}};
+ const allLessons=mode=>groupsFor(mode).flatMap(group=>group.lessons);
+ const state={mode:'reading',garden:'garden-1',cellSize:18,pinyin:false,strokes:false,printStrokes:false,name:'',selected:{reading:new Set(allLessons('reading').map(l=>l.id)),writing:new Set(allLessons('writing').map(l=>l.id))}};
  let printing=false,printScope='current',frame=0,animationToken=0,currentItem=null,step=0,playing=false;
- const allWriting=DATA.writingGroups.flatMap(g=>g.items);
- const shortNames={'units-1-2':'第 1–2 单元','units-3-4':'第 3–4 单元','units-5-8':'第 5–8 单元'};
- const selectedGroups=mode=>groupsFor(mode).filter(g=>state.selected[mode].has(g.id));
- const count=mode=>selectedGroups(mode).reduce((sum,g)=>sum+g.items.length,0);
+ const allWriting=allLessons('writing').flatMap(l=>l.items);
+ const scopedGroups=mode=>groupsFor(mode).filter(g=>state.garden==='all'||g.id===state.garden);
+ const selectedGroups=mode=>scopedGroups(mode).map(g=>({...g,lessons:g.lessons.filter(l=>state.selected[mode].has(l.id))})).filter(g=>g.lessons.length);
+ const count=mode=>selectedGroups(mode).reduce((sum,g)=>sum+g.lessons.reduce((n,l)=>n+l.items.length,0),0);
+ const scopeTitle=()=>state.garden==='all'?'全册 · 语文园地一至八':groupsFor(state.mode).find(g=>g.id===state.garden).title;
  const totalStrokes=char=>STROKES[char]?.strokes.length||0;
  function glyph(char,until=Infinity,highlight=false){
   const strokes=STROKES[char]?.strokes;
@@ -64,7 +69,7 @@ dialog{border:1px solid var(--rule);padding:28px;border-radius:12px;width:min(48
   return `<svg class="glyph" viewBox="0 0 1024 1024" role="img" aria-label="${esc(char)}"><g transform="translate(0 900) scale(1 -1)">${paths}</g></svg>`;
  }
  function gridCell(char='',example=false){return `<div class="tian${example?' example-cell':''}"${char?` data-char="${esc(char)}"`:''}>${char?(example?`<button class="character-button" data-demo="${esc(char)}" aria-label="查看${esc(char)}的笔顺">${glyph(char)}</button>`:glyph(char)):''}</div>`;}
- function readingRow(items){return `<div class="reading-row">${items.map(item=>`<div class="reading-cell" data-char="${esc(item.char)}"${item.note?` title="${esc(item.note)}"`:''}><div class="pinyin-box"><span class="pinyin-rule first"></span><span class="pinyin-rule second"></span><span class="pinyin-answer">${esc(item.pinyin)}</span></div>${gridCell(item.char)}</div>`).join('')}</div>`;}
+ function readingRow(items){return `<div class="reading-row">${items.map(item=>`<div class="reading-cell${item.additionalPronunciation?' additional':''}" data-char="${esc(item.char)}" data-pinyin="${esc(item.pinyin)}"${item.note?` title="${esc(item.note)}"`:''}><div class="pinyin-box"><span class="pinyin-rule first"></span><span class="pinyin-rule second"></span><span class="pinyin-answer">${esc(item.pinyin)}</span></div>${gridCell(item.char)}${item.additionalPronunciation?'<span class="practice-badge">多音字</span>':''}</div>`).join('')}</div>`;}
  function strokeStrip(char){return `<div class="stroke-strip" aria-label="${esc(char)}的逐笔顺序"><span class="stroke-label">笔顺</span>${STROKES[char].strokes.map((_,i)=>`<figure class="stroke-step"><div class="stroke-mini">${glyph(char,i+1,true)}</div><figcaption>${i+1}</figcaption></figure>`).join('')}</div>`;}
  function writingRow(item,ordinal,withStrokes){
   const columns=Math.floor(180/state.cellSize);
@@ -73,50 +78,56 @@ dialog{border:1px solid var(--rule);padding:28px;border-radius:12px;width:min(48
  function paginate(mode,isPrint){
   const withStrokes=mode==='writing'&&(isPrint?state.printStrokes:state.strokes),pages=[];
   const cell=state.cellSize,columns=Math.floor(180/cell),rowHeight=mode==='reading'?cell+17:cell+9+(withStrokes?17:0),capacity=234;
-  let blocks=[],used=0,ordinal=0;
-  const finish=()=>{if(blocks.length)pages.push({mode,blocks,withStrokes});blocks=[];used=0;};
-  selectedGroups(mode).forEach((group,groupIndex)=>{
-   const rows=mode==='reading'?Array.from({length:Math.ceil(group.items.length/columns)},(_,i)=>group.items.slice(i*columns,(i+1)*columns)):group.items.map(item=>[item]);
-   let needsHeading=true,continued=false;
-   rows.forEach((items,rowIndex)=>{
-    if(used+rowHeight+(needsHeading?9:0)>capacity){finish();needsHeading=true;continued=rowIndex>0;}
-    if(needsHeading){blocks.push({kind:'heading',group,groupIndex,continued});used+=9;needsHeading=false;}
-    ordinal+=items.length;
-    blocks.push({kind:'row',items,ordinal:ordinal-items.length+1});used+=rowHeight;
-   });
-  });finish();return pages;
+  selectedGroups(mode).forEach(group=>{
+   let blocks=[],used=0,ordinal=0;
+   const finish=()=>{if(blocks.length)pages.push({mode,group,blocks,withStrokes});blocks=[];used=0;};
+   group.lessons.forEach(lesson=>{
+    const rows=mode==='reading'?Array.from({length:Math.ceil(lesson.items.length/columns)},(_,i)=>lesson.items.slice(i*columns,(i+1)*columns)):lesson.items.map(item=>[item]);
+    let needsHeading=true,continued=false;
+    rows.forEach((items,rowIndex)=>{
+     if(used+rowHeight+(needsHeading?9:0)>capacity){finish();needsHeading=true;continued=rowIndex>0;}
+     if(needsHeading){blocks.push({kind:'heading',lesson,continued});used+=9;needsHeading=false;}
+     ordinal+=items.length;
+     blocks.push({kind:'row',lesson,items,ordinal:ordinal-items.length+1});used+=rowHeight;
+    });
+   });finish();
+  });return pages;
  }
  function pageHTML(page,index,total){
   const reading=page.mode==='reading';
-  const title=reading?'认一认':'写一写',instruction=reading?'读汉字，在上方写拼音':'看范字，每个字写一行';
-  const blockHTML=page.blocks.map(block=>block.kind==='heading'?`<h3 class="group-title"><span class="group-index">${String(groupsFor(page.mode).findIndex(g=>g.id===block.group.id)+1).padStart(2,'0')}</span>${esc(block.group.title)}${block.continued?'<small>（续）</small>':''}</h3>`:reading?readingRow(block.items):writingRow(block.items[0],block.ordinal,page.withStrokes)).join('');
-  return `<article class="sheet ${page.mode}-sheet" aria-label="${title}，第${index+1}页" style="--cell:${state.cellSize}mm"><header class="sheet-header"><div class="sheet-topline"><span>语 文 练 习 册</span><span>${reading?'拼音田字格':'田字格'} · ${state.cellSize} mm</span></div><div class="sheet-heading"><div class="sheet-title">${title}<span>${instruction}</span></div><div class="personal"><div>姓名 <span>${esc(state.name)||'&nbsp;'}</span></div><div>日期 <span>&nbsp;</span></div></div></div></header><div class="sheet-body">${blockHTML}</div><footer class="sheet-footer"><span>${reading?'看清字形，读准字音。':'头正、肩平、身直、足安。'}</span><span class="page-number">${String(index+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}</span></footer></article>`;
+  const title=reading?'写拼音':'练写字',instruction=reading?'看汉字，在上方填写拼音':'看范字，每个字写一行';
+  const blockHTML=page.blocks.map(block=>block.kind==='heading'?`<h3 class="group-title" data-lesson-heading="${esc(block.lesson.id)}">${esc(block.lesson.title)}${block.continued?'<small>（续）</small>':''}</h3>`:`<div data-lesson-row="${esc(block.lesson.id)}">${reading?readingRow(block.items):writingRow(block.items[0],block.ordinal,page.withStrokes)}</div>`).join('');
+  return `<article class="sheet ${page.mode}-sheet" data-garden="${esc(page.group.id)}" aria-label="${esc(page.group.title)}，${title}，第${index+1}页" style="--cell:${state.cellSize}mm"><header class="sheet-header"><div class="sheet-topline"><span>语文练习册　<span class="chapter-caption">${esc(page.group.title)}</span></span><span>${reading?'识字表 · 拼音田字格':'写字表 · 田字格'} · ${state.cellSize} mm</span></div><div class="sheet-heading"><div class="sheet-title">${title}<span>${instruction}</span></div><div class="personal"><div>姓名 <span>${esc(state.name)||'&nbsp;'}</span></div><div>日期 <span>&nbsp;</span></div></div></div></header><div class="sheet-body">${blockHTML}</div><footer class="sheet-footer"><span>${reading?'拼音按本课读音填写；多音字按教材课次分别练习。':'头正、肩平、身直、足安。'}</span><span class="page-number">${String(index+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}</span></footer></article>`;
  }
  function fitPages(){if(printing)return;const available=$('pages').clientWidth;document.documentElement.style.setProperty('--scale',Math.min(1,available/(210*96/25.4)));}
  function render(isPrint=false,scope='current'){
   const modes=scope==='all'?['reading','writing']:[state.mode];
   const pages=modes.flatMap(mode=>paginate(mode,isPrint));
   $('pages').classList.toggle('show-pinyin',state.pinyin&&!isPrint);
-  $('pages').innerHTML=pages.length?pages.map((p,i)=>pageHTML(p,i,pages.length)).join(''):'<div class="empty screen-only"><h3>先选一组汉字吧</h3><p>在左侧勾选练习范围，或一键选择全部。</p><button class="button primary" id="emptySelectAll">选择全部</button></div>';
+  $('pages').innerHTML=pages.length?pages.map((p,i)=>pageHTML(p,i,pages.length)).join(''):'<div class="empty screen-only"><h3>这一章还没有勾选内容</h3><p>勾选要练的课次，或选择本章全部内容。</p><button class="button primary" id="emptySelectAll">选择当前章节全部内容</button></div>';
   // Layout sizes stay in millimetres, including the optional 20 mm setting.
   $('pages').querySelectorAll('.reading-row').forEach(el=>el.style.height=(state.cellSize+17)+'mm');
   $('pages').querySelectorAll('.write-row').forEach(el=>el.style.height=(state.cellSize+9+(el.classList.contains('with-strokes')?17:0))+'mm');
-  if(!isPrint){$('previewTitle').textContent=state.mode==='reading'?'拼音田字格':'一字一行 · 田字格';$('previewSummary').textContent=`已选 ${count(state.mode)} 字 · 屏幕 ${pages.length} 页 · 打印 ${paginate(state.mode,true).length} 页${state.mode==='writing'?` · 每行 1 个范字 + ${Math.floor(180/state.cellSize)-1} 个空格`:''}`;$('printCurrent').disabled=!count(state.mode);$('printAll').disabled=!(count('reading')+count('writing'));fitPages();}
+  if(!isPrint){$('scopeContext').textContent=scopeTitle();$('previewTitle').textContent=state.mode==='reading'?'识字表 · 写拼音':'写字表 · 练写字';$('previewSummary').textContent=`已选 ${count(state.mode)} ${state.mode==='reading'?'项':'字'} · 屏幕 ${pages.length} 页 · 打印 ${paginate(state.mode,true).length} 页`;$('practiceGuide').textContent=state.mode==='reading'?'每字一个拼音田字格，打印时上方拼音栏留空。':`一字一行，首格为范字，后面 ${Math.floor(180/state.cellSize)-1} 格留给孩子写。`;$('printCurrent').disabled=!count(state.mode);$('printAll').disabled=!(count('reading')+count('writing'));$('printAll').title=`打印${scopeTitle()}内，两类各自已勾选的内容`;fitPages();}
  }
  function updateFilters(){
-  $('groupFilters').innerHTML=groupsFor(state.mode).map(group=>`<label class="check-label"><input type="checkbox" data-group="${esc(group.id)}"${state.selected[state.mode].has(group.id)?' checked':''}><span class="label-text">${esc(shortNames[group.id]||group.title)}</span><small>${group.items.length}</small></label>`).join('');
+  const lessonLabel=lesson=>`<label class="check-label"><input type="checkbox" data-lesson="${esc(lesson.id)}"${state.selected[state.mode].has(lesson.id)?' checked':''}><span class="label-text">${esc(lesson.title)}</span><small>${lesson.items.length}</small></label>`;
+  $('groupFilters').innerHTML=scopedGroups(state.mode).map(group=>state.garden==='all'?`<details class="lesson-group"><summary>${esc(group.title)} · ${group.lessons.reduce((n,l)=>n+l.items.length,0)} ${state.mode==='reading'?'项':'字'}</summary><div class="filter-list">${group.lessons.map(lessonLabel).join('')}</div></details>`:group.lessons.map(lessonLabel).join('')).join('');
+  $('chapterButtons').innerHTML=groupsFor(state.mode).map(group=>`<button class="chapter-button" data-garden-select="${esc(group.id)}" aria-label="${esc(group.title)}" aria-pressed="${state.garden===group.id}">${esc(group.title.replace('语文',''))}</button>`).join('')+`<button class="chapter-button all-chapters" data-garden-select="all" aria-pressed="${state.garden==='all'}">全册 · 八个园地</button>`;
  }
  function syncControls(){
   document.querySelectorAll('[data-mode]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mode===state.mode)));
   $('pinyinToggle').hidden=state.mode!=='reading';$('strokeToggle').hidden=state.mode!=='writing';
   $('pinyinToggle').setAttribute('aria-pressed',String(state.pinyin));$('pinyinToggle').querySelector('.label-text').textContent=state.pinyin?'隐藏拼音':'显示拼音';
   $('strokeToggle').setAttribute('aria-pressed',String(state.strokes));$('strokeToggle').querySelector('.label-text').textContent=state.strokes?'隐藏笔顺':'显示笔顺';
-  $('screenHint').textContent=state.mode==='reading'?'先让孩子认读，需要时再打开提示。打印时拼音仍为空白。':'打开可看逐笔图示；点击首格范字，还能播放笔顺。';
+  $('screenHint').textContent=state.mode==='reading'?'用于家长核对答案。拼音依照教材，打印时始终留空。':'打开可看逐笔图示；点击首格范字，还能播放笔顺。';
  }
  document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{state.mode=button.dataset.mode;updateFilters();syncControls();render();}));
- $('groupFilters').addEventListener('change',event=>{const id=event.target.dataset.group;if(!id)return;event.target.checked?state.selected[state.mode].add(id):state.selected[state.mode].delete(id);render();});
- function selectAll(){state.selected[state.mode]=new Set(groupsFor(state.mode).map(g=>g.id));updateFilters();render();}
- $('selectAll').addEventListener('click',selectAll);$('clearAll').addEventListener('click',()=>{state.selected[state.mode].clear();updateFilters();render();});
+ $('chapterButtons').addEventListener('click',event=>{const button=event.target.closest('[data-garden-select]');if(!button)return;state.garden=button.dataset.gardenSelect;updateFilters();render();});
+ $('groupFilters').addEventListener('change',event=>{const id=event.target.dataset.lesson;if(!id)return;event.target.checked?state.selected[state.mode].add(id):state.selected[state.mode].delete(id);render();});
+ function setScopeSelection(kind){scopedGroups(state.mode).flatMap(g=>g.lessons).forEach(lesson=>{if(kind==='all'||(kind==='garden'&&lesson.kind==='garden'))state.selected[state.mode].add(lesson.id);else state.selected[state.mode].delete(lesson.id);});updateFilters();render();}
+ function selectAll(){setScopeSelection('all');}
+ $('selectAll').addEventListener('click',selectAll);$('clearAll').addEventListener('click',()=>setScopeSelection('none'));$('gardenOnly').addEventListener('click',()=>setScopeSelection('garden'));
  $('pinyinToggle').addEventListener('click',()=>{state.pinyin=!state.pinyin;syncControls();$('pages').classList.toggle('show-pinyin',state.pinyin);});
  $('strokeToggle').addEventListener('click',()=>{state.strokes=!state.strokes;syncControls();render();});
  $('cellSize').addEventListener('change',event=>{state.cellSize=Number(event.target.value);render();});
@@ -129,8 +140,11 @@ dialog{border:1px solid var(--rule);padding:28px;border-radius:12px;width:min(48
  window.addEventListener('beforeprint',beforePrint);window.addEventListener('afterprint',afterPrint);
  window.addEventListener('resize',()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(fitPages);});
  if(window.ResizeObserver)new ResizeObserver(fitPages).observe($('pages'));
- const notes=new Map();[...DATA.readingGroups,...DATA.writingGroups].flatMap(g=>g.items).forEach(item=>{if(item.note&&!notes.has(item.char))notes.set(item.char,item.note);});
- $('pronunciationNotes').innerHTML=Array.from(notes,([char,note])=>`<li><strong>${esc(char)}</strong>：${esc(note)}</li>`).join('');
+ const notes=new Map();[...allLessons('reading'),...allLessons('writing')].flatMap(l=>l.items).forEach(item=>{const key=item.char+' '+item.pinyin;if(item.note&&!notes.has(key))notes.set(key,item.note);});
+ $('pronunciationNotes').innerHTML=Array.from(notes,([label,note])=>`<li><strong>${esc(label)}</strong>：${esc(note)}</li>`).join('');
+ $('readingTotal').textContent=DATA.metadata.reading.uniqueCount+' 字';$('writingTotal').textContent=DATA.metadata.writing.uniqueCount+' 字';
+ $('sourceSummary').textContent=`教材识字表 ${DATA.metadata.reading.uniqueCount} 个生字，另有 ${DATA.metadata.reading.additionalPronunciationCount} 个多音字补充读音，共 ${DATA.metadata.reading.practiceCount} 个练习项；写字表 ${DATA.metadata.writing.uniqueCount} 字。`;
+ $('licenseSummary').textContent=`2026-10-31 选取并汇编 ${Object.keys(STROKES).length} 字，单字矢量数据未修改。Arphic 字形与笔顺数据遵循 Arphic Public License。`;
  function stopAnimation(){animationToken++;playing=false;$('playStroke').textContent='播放笔顺';}
  function updateAnimationStatus(){const total=totalStrokes(currentItem.char);$('animationStatus').textContent=step?`第 ${step} 笔 / 共 ${total} 笔`:`准备好了 · 共 ${total} 笔`;$('previousStroke').disabled=step===0||playing;$('nextStroke').disabled=step===total||playing;}
  function drawAnimation(){
